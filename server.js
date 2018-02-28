@@ -14,6 +14,8 @@ app.use(morgan('dev'))
 
 const guestRoutes = require('./routes/guestRoutes.js')
 
+app.use('/newStudent', guestRoutes)
+
 app.use((req, res)=>{
   const status = 404;
   const message = `Could not find that`
